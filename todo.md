@@ -1,0 +1,330 @@
+# Project TODO
+
+- [x] Define the ethical-consumption platform data model for products, evidence, alternatives, articles, community posts, answers, votes, campaigns, donations, and user contributions.
+- [x] Add database tables, typed database helpers, and tRPC procedures for the directory, alternatives, news, community, profile, campaign-management, and administration flows.
+- [x] Add normalized product and proof-link models with evidence citations for product detail pages.
+- [x] Connect product-specific proof links, alternatives, and brand context to the public product-detail route.
+- [x] Defer payment recording procedures until Stripe is connected, at the user's direction.
+- [x] Defer Stripe one-time and recurring checkout integration until payment capabilities are connected, at the user's direction.
+- [x] Create the public design system with trusted sustainability styling, responsive top navigation, mobile menu, reusable cards, badges, filters, forms, and alert states.
+- [x] Build the mission-led home page with call-to-action buttons, featured live stats, impact proof, and curated alternatives.
+- [x] Build the searchable boycott directory with category filters, product detail views, evidence citations, and parent-brand context.
+- [x] Build the ethical alternatives finder with search, category browsing, ratings, and community endorsements.
+- [x] Build the news and updates feed with tags, article detail pages, and featured-story treatment.
+- [x] Provide the donation hub’s campaign progress, preset and custom amount preparation, and explicitly disabled secure-checkout state while Stripe is deferred.
+- [x] Build the streaming AI assistant with contextual ethical-consumption guardrails, preset queries, and a reusable chat surface.
+- [x] Build the authenticated community Q&A board with new questions, answers, and helpful-vote interactions.
+- [x] Build authenticated profile views with contribution history.
+- [x] Build the dedicated admin dashboard layout for managing products, news articles, and community moderation.
+- [x] Defer donation receipt notifications until Stripe payment events are available; new community question and answer submissions are already notified.
+- [x] Add mobile-first responsiveness, accessible navigation and form semantics, empty and error states, and application metadata.
+- [x] Write or update Vitest coverage for critical data and server procedures.
+- [x] Run type checks, automated tests, production build, and visual verification for desktop and mobile layouts.
+- [x] Save the completed project checkpoint for delivery.
+- [x] Add reusable public filter controls plus empty and error-state patterns to the directory, alternatives, news, and donation routes.
+- [x] Add a curated alternatives section and evidence-backed proof trail to the home page using only published platform data.
+- [x] Add administrator campaign setup so the donation page can display real campaign details and payment-confirmed progress when Stripe is connected.
+- [x] Verify the final Stripe-deferred donation experience clearly communicates its non-transactional status and offers a helpful next action.
+- [x] Replace the dark green visual system with an accessible Palestinian-flag-inspired palette of white, green, black, and restrained red accents.
+- [x] Simplify the public navigation and landing page around product checking, alternatives, updates, Islamic guidance, and donations; remove directory and community prominence.
+- [x] Research and document the Ireland Palestine Solidarity Campaign boycott source, including its usable product or company list, scope, update date, and attribution requirements.
+- [x] Build a product-checking workflow that reports a clearly attributed boycott result from reviewed IPSC source data rather than making unsupported product claims.
+- [x] Add region-aware alternative recommendations with clear availability caveats and administrator-managed source links.
+- [x] Add region, source URL, source review date, and availability-note fields to the administrator alternatives management UI and connect them to the typed administration procedure.
+- [x] Add procedure coverage for administrator-managed source-linked regional alternatives without direct database changes.
+- [x] Refocus the updates feed on sourced Palestine, humanitarian, and Islamic-world news with clear publisher attribution and publication dates.
+- [x] Adapt the AI assistant into an Islamic guidance assistant that distinguishes general information from religious rulings and presents supporting citations where available.
+- [x] Add transparent source, freshness, and moderation disclosures for boycott data, regional alternatives, news, and Islamic guidance.
+- [x] Add a deterministic, topic-aware Qur'an reference appendix for selected Islamic guidance questions and test its source-link behavior.
+- [x] Audit and strengthen visible IPSC scope, source-review, freshness, and editorial-review disclosures on product-checker and alternatives surfaces.
+- [x] Visually verify the redesigned product checker, regional alternatives, sourced updates, and Islamic guidance disclosure states.
+- [x] Update automated tests and visual checks for the redesigned product-checking and Islamic-guidance experience.
+- [x] Save the reviewed Palestine-focused redesign checkpoint for delivery.
+- [x] Inspect the supplied boycott and alternatives workbook, document its sheets and columns, and map clean matching keys for products, brands, and sub-brands.
+- [x] Replace the separate product-checker and alternatives journeys with one unified search result that immediately returns relevant spreadsheet-backed alternatives for a boycott match.
+- [x] Import the workbook’s reviewed boycott and alternatives records into the application data layer with clear source and freshness metadata.
+- [x] Add fallback search behaviour that clearly distinguishes a no-match result from an unreviewed product and does not claim a product is not boycotted without supporting data.
+- [x] Replace the Profile experience and navigation label with an About Us page explaining Avoid It’s purpose, source approach, and limitations.
+- [x] Remove the admin portal route, navigation affordance, and related public-facing entry points.
+- [x] Replace the Palestinian flag mark with a distinctive, accessible Avoid It logo that is general-purpose and not based on a national flag.
+- [x] Remove legacy detail-page links to the standalone alternatives route and direct visitors back to the unified product checker instead.
+- [x] Visually review the generated Avoid It logo in the header and favicon contexts, replacing it if it remains generic or flag-like.
+- [x] Verify the revised header and navigation render correctly with the new logo on desktop and mobile.
+- [x] Add regression tests and visual verification for unified search, immediate alternatives, About Us navigation, removed admin access, and the new brand identity.
+- [x] Confirm the configured Avoid It favicon loads in the browser alongside the reviewed header logo.
+- [x] Add explicit route and navigation audit coverage for About Us and the removed admin and standalone alternatives public entry points.
+- [x] Validate live imported workbook matches and cautious no-match behavior in the unified checker.
+- [x] Save the unified checker and brand revision checkpoint for delivery.
+- [x] Save and confirm the unified checker and brand revision checkpoint after the final build and live search verification.
+- [x] Create a more distinctive, professional Avoidit logo that is visually ownable and not generic or flag-based.
+- [x] Replace the About Us page with mission-led NGO content describing Avoidit’s work to raise boycott awareness, inform global consumers, and reduce economic support for oppression affecting Muslim communities.
+- [x] Validate the refreshed logo and NGO About Us presentation on desktop and mobile.
+- [x] Save the refined identity and NGO messaging checkpoint for delivery.
+- [x] Save and confirm a new project checkpoint containing the refined Avoidit logo, NGO About Us rewrite, live identity validation, and mobile hero fixes.
+- [x] Apply the new Avoidit logo to the header wordmark and favicon, then validate it in the live application.
+- [x] Confirm the revised About Us page renders its NGO mission content and passes type and visual validation.
+- [x] Correct the mobile home-page hero composition so the headline, source badge, and product-check form remain fully readable against the background geometry.
+- [x] Remove the remaining flag-style symbol from the home-page product-checking panel so the new Avoidit identity is used consistently.
+- [x] Validate the refined Avoidit favicon and header logo in the live preview after the latest logo replacement, and record the confirmation.
+- [x] Persist and confirm the refined-logo live validation record with the verified page title, header logo URL, favicon URL, and verification date.
+- [x] Create a clean standalone transparent logo mark from the circular-arrow symbol in the user-supplied canvas, excluding the paper square and outer image background.
+- [x] Replace the current Avoidit header logo, home panel logo, and favicon with the user-supplied circular-arrow mark.
+- [x] Confirm the user-supplied circular-arrow asset is referenced by the header, home panel, and favicon, then run type and visual validation.
+- [x] Replace the visible square-backed generated logo asset with a truly transparent standalone circular-arrow mark, as requested by the user.
+- [x] Validate the user-supplied circular-arrow logo replacement in desktop and mobile public previews.
+- [x] Save the user-supplied logo replacement checkpoint for delivery.
+- [x] Confirm the new logo URL has resolved from its temporary generation placeholder to the finished transparent mark.
+- [x] Reduce the visual gap between the circular-arrow mark and the Avoidit wordmark in the public header.
+- [x] Replace every user-facing reference to the imported “workbook” with “database,” while preserving code and data-model identifiers where appropriate.
+- [x] Validate the revised header spacing and database terminology in public previews, automated checks, and the production build.
+- [x] Save the logo-spacing and terminology refinement checkpoint for delivery.
+- [x] Update the seed SQL and seed helper so fresh database loads normalize user-facing source labels to database terminology.
+- [x] Verify stored boycott-source labels contain no remaining workbook wording and confirm the refinement on both desktop and mobile previews.
+- [x] Restore the “Choose with conscience” supporting line in its original inline desktop-header treatment.
+- [x] Rebuild the header wordmark so the circular-arrow mark functions as the O in “Avoidit,” with more open letter spacing.
+- [x] Confirm the generated red-tipped assets were unsuitable because they introduced horizontal-line graphics, and discard them from the public identity.
+- [x] Replace the unusable generated red-tip asset with a clean inline vector red arrow-tip treatment using the approved circular-arrow silhouette.
+- [x] Revalidate the restored wordmark in desktop and mobile public headers, automated checks, and the production build.
+- [x] Save the restored Avoidit identity checkpoint for delivery.
+- [x] Record checkpoint `cc635718` for the final logo-as-O, red-tip, and tagline restoration release.
+- [x] Use the approved circular-arrow logo asset as the source silhouette for the logo-as-O treatment, with only a red arrow-tip overlay added.
+- [x] Verify and document the final header, home-panel, and favicon mark treatment for transparency and absence of stray graphics.
+- [x] Re-check the final approved-asset logo treatment in the header, home panel, and favicon, then record explicit findings.
+- [x] Confirm the final logo-validation note persists the approved transparent source, red-tip overlay, and no-stray-graphics findings.
+- [x] Recreate the circular-arrow logo from the newly supplied canvas as a clean standalone vector mark without paper, square, or canvas background.
+- [x] Replace only the O in the Avoidit wordmark with the newly supplied mark at the same visual scale as the letters, retaining the current letter spacing.
+- [x] Preserve the existing tagline, header layout, home panel, favicon, and all other public presentation unchanged.
+- [x] Validate the logo-only update on desktop and mobile, then run automated checks and a production build.
+- [x] Save final logo-only replacement checkpoint `c8e9c09f` for delivery.
+- [x] Verify the newly generated O-logo asset was unsuitable because of horizontal-line artifacts and exclude it from the public interface.
+- [x] Document the generated-asset rejection and the final transparent inline-vector O-mark verification before release.
+- [x] Confirm the saved validation note records the generated asset’s blue horizontal-line artifacts and confirms its URL is absent from public UI code.
+- [x] Directly re-inspect the generated O-logo asset and record the visible horizontal-line artifacts before final release.
+- [x] Replace the generated O-logo asset with a clean inline vector recreation of the supplied circular-arrow mark.
+- [x] Inspect the updated boycott Excel sheet and compare its products, companies, and alternatives with the current imported database.
+- [x] Refresh the live boycott database from the updated Excel data, including the newly added product and company, without duplicating prior records.
+- [x] Adjust only the logo-as-O geometry: reduce its scale slightly, close the lower connection to the arrow, and preserve a small upper gap so it reads as an O rather than an E.
+- [x] Preserve the A, V, I, D, I, T letters, existing word spacing, Choose with conscience line, header layout, home panel, favicon, and all other public presentation.
+- [x] Validate the refreshed data and refined O-mark on desktop and mobile, then run automated checks and a production build.
+- [x] Save updated boycott-data and O-mark refinement checkpoint `d4a99f05` for delivery.
+- [x] Restore only the O-mark to exactly match the original supplied green circular ring, rising green arrow, and red arrowhead design.
+- [x] Preserve the A, V, I, D, I, T letters, existing word spacing, Choose with conscience line, header layout, home panel, favicon, and all other public presentation unchanged.
+- [x] Validate the O-mark restoration on desktop and mobile, then run automated checks and a production build.
+- [x] Save exact O-mark restoration checkpoint `def25c96` for delivery.
+- [x] Compare the restored O-mark against the supplied reference visual and document the matched ring, rising-arrow, red-arrowhead, and artifact-free geometry findings without reopening the attachment.
+- [x] Review the supplied source link and identify suitable Al Jazeera, BBC, and East News source pages or feeds for conflict reporting.
+- [x] Restrict the Updates section to source-linked reporting on Gaza, Sudan, and other relevant humanitarian conflicts affecting Muslim communities, rather than general outlet coverage.
+- [x] Implement a cautious daily news-refresh workflow that preserves source attribution, prevents duplicates, and excludes irrelevant stories.
+- [x] Validate the focused Updates feed, source links, relevance filtering, and daily refresh behavior without changing unrelated site sections.
+- [x] Save the focused daily-news update checkpoint for delivery.
+- [x] Sanitize source RSS summaries so the Updates cards never render escaped markup or raw feed fragments.
+- [x] Align the Updates-page publisher disclosure with the active MENA source feed.
+- [x] Deduplicate repeated publisher headlines so the same source story is not rendered twice through separate RSS URLs.
+- [x] Resolve the bounded-heap production-build validation failure and complete a successful production build for the focused-news release.
+- [x] Identify and document the Middle East News Agency (MENA) RSS endpoint alongside the reviewed Al Jazeera and BBC sources before enabling its scheduled ingestion.
+- [x] Clear the platform deployment precondition and register the active daily focused-news schedule at 06:15 Africa/Lagos.
+- [x] Execute the focused-news refresh through its scheduled-path equivalent and verify refresh-state metadata, source attribution, canonical-URL deduplication, and in-scope filtering end to end.
+- [x] Update the daily agent schedule so each run securely POSTs to the deployed `/api/scheduled/refresh-focused-news` callback using its injected scheduled-task credentials.
+- [x] Tighten focused-news relevance gating so articles must contain both a covered conflict geography and a humanitarian or conflict-impact signal, excluding general political and feature coverage.
+- [x] Inspect the newly supplied expanded boycott worksheet and reconcile every approved change with the live boycott database.
+- [x] Apply the worksheet-derived boycott records and alternatives without altering unrelated product data or site sections.
+- [x] Remove only the “A practical Palestine solidarity resource” hero eyebrow text.
+- [x] Validate the worksheet refresh, the unified product checker, and the isolated hero-copy removal before publishing.
+- [x] Save the worksheet-refresh and hero-copy update checkpoint for delivery.
+- [x] Inspect the supplied hero video and prepare a web-delivery version that retains its visual resolution while reducing playback overhead.
+- [x] Upload the optimized video as a project static asset and use responsive, performance-conscious playback settings.
+- [x] Place the video only in the right half of the hero canvas beneath the existing heading and supporting copy, without overlapping the wordmark, tagline, or navigation.
+- [x] Reposition the product-checking panel to the central hero area while preserving its existing content and behavior.
+- [x] Validate the updated hero on desktop and mobile, including video playback behavior and visual hierarchy.
+- [x] Save the responsive hero-video update checkpoint for delivery.
+- [x] Inspect the hero video’s runtime playback path and correct any autoplay or rendering issue without changing unrelated hero content.
+- [x] Add a small accessible play/pause control for the hero video on desktop and mobile.
+- [x] Make only the product-checking panel backdrop substantially more transparent with a soft blur while preserving readable text over the video.
+- [x] Validate active playback, playback controls, overlay readability, and layout on desktop and mobile.
+- [x] Save the controlled hero-video refinement checkpoint for delivery.
+- [x] Inspect the existing hero-video source and playback controls to preserve the embedded audio track and full 2560×1440 delivery.
+- [x] Move the play/pause control from the text panel onto the hero video and add a visible adjacent mute/unmute control.
+- [x] Ensure visitor-initiated sound activation and smooth responsive playback preserve browser autoplay compatibility.
+- [x] Validate control placement, sound selection behavior, video delivery, and desktop/mobile layout.
+- [x] Save the hero-video sound-control update checkpoint for delivery.
+- [x] Inspect the reported Vite development-preview WebSocket failure and identify its configuration or server cause.
+- [x] Apply the smallest safe preview-only fix without changing production application behavior.
+- [x] Restart and verify that the preview no longer reports a failed Vite WebSocket connection.
+- [x] Save the verified preview WebSocket fix checkpoint for delivery.
+- [x] Measure the current production hero-video asset and select a lower-bitrate, resolution-preserving delivery profile.
+- [x] Publish the optimized 2560×1440 video asset, remove the play/pause control, and retain only a visible mute/unmute control.
+- [x] Verify automatic muted playback, visitor-selected sound, responsive layout, and reduced delivery size without changing unrelated hero content.
+- [x] Save the lightweight hero-video update checkpoint for delivery.
+- [x] Extract the supplied reference hero’s entrance timing and map it only to the existing Avoidit headline, product search, and video-backed panel.
+- [x] Add the requested hero entrance transitions without changing existing copy, layout, colors, video delivery, or controls.
+- [x] Validate the motion sequence, reduced-motion behavior, and unchanged desktop and mobile hero presentation.
+- [x] Save the hero-transition update checkpoint for delivery.
+- [x] Inspect the renewed Vite preview WebSocket failure and confirm the public HMR client target.
+- [x] Apply the smallest safe proxy-aware HMR fix without changing application behavior.
+- [x] Restart and verify the preview no longer reports a failed Vite WebSocket connection.
+- [x] Save the renewed preview WebSocket fix checkpoint for delivery.
+- [x] Restore the “Choose with conscience” wordmark tagline beside Avoidit on mobile exactly as in the desktop header.
+- [x] Inspect the focused-news refresh state, active daily schedule, and stored article freshness against the approved source workflow.
+- [x] Run the approved focused-news refresh and retain only current eligible Gaza, Sudan, and related humanitarian-conflict reporting.
+- [x] Replace the unreliable task-triggered refresh with a direct authenticated daily focused-news callback and retire the duplicate schedule.
+- [x] Validate the corrected mobile wordmark and the refreshed Updates feed without altering other user-facing sections.
+- [x] Save the mobile branding and current focused-news update checkpoint for delivery.
+- [x] Replace only the hero supporting paragraph with original copy about purposeful boycott choices, Palestinian rights, and peaceful justice.
+- [x] Verify the updated hero copy retains the current layout and save the supporting-copy update checkpoint.
+- [x] Review the referenced boycott-site landing page and distill only adaptable mission and impact-content themes.
+- [x] Replace the current three landing-page process cards with original Avoidit mission and impact content, including 220+ companies and 600+ affected products.
+- [x] Add an original, clearly aspirational 1.5-million-person peace-advocacy reach statement without presenting it as a verified visitor metric.
+- [x] Validate the revised landing page preserves existing visual language, responsiveness, search flow, news, and guidance entry points.
+- [x] Save the landing-page mission and impact-content update checkpoint for delivery.
+- [x] Replace the compact Focused / Attributed / Regional strip with concise Avoidit boycott-scale figures: 220+ companies, 600+ products, and a 1.5M-person peace-reach goal.
+- [x] Replace the larger three-card heading and content with original concise Avoidit objectives inspired by the reviewed reference themes.
+- [x] Validate the relocated figures and objective cards preserve the existing landing-page structure, desktop readability, and mobile stacking.
+- [x] Save the landing-page objectives and metric-strip update checkpoint for delivery.
+- [x] Restore the product-checker heading “From uncertainty to a more informed everyday choice” and place “Check a product and see alternatives immediately” beneath it.
+- [x] Remove user-facing “database” wording from product-checker instructions and replace it with clear boycott-list and alternatives language.
+- [x] Present listed products with a clear red boycott result and unlisted products with a careful green “not currently on the boycott list” result, without claiming universal safety.
+- [x] Confirm every boycotted product displays its related alternatives directly below the result and validate listed and unlisted searches without changing the UI structure.
+- [x] Save the refined product-checker language update checkpoint for delivery.
+- [x] Audit the existing hero transition classes and all remaining landing-page sections for motion-safe integration points.
+- [x] Apply the existing Avoidit entrance-motion language to the landing-page sections with restrained staggered timing and no UI or content changes.
+- [x] Preserve reduced-motion behavior and validate desktop/mobile presentation, TypeScript, automated tests, and a bounded-memory production build.
+- [x] Save the landing-page transition-extension checkpoint for delivery.
+- [x] Inspect the reported homepage tRPC “Failed to fetch” error in browser, network, and development-server logs.
+- [x] Apply the smallest safe homepage API-query reliability fix without changing the public UI or unrelated flows.
+- [x] Validate the homepage request path, browser console, TypeScript, automated tests, and production build after the fix.
+- [x] Save the homepage API-query reliability fix checkpoint for delivery.
+- [x] Audit the shared public-page layout and requested Check a Product, Updates, Islamic guidance, Donate, and About Us sections for hero-style reveal integration.
+- [x] Apply hero-style viewport-triggered staggered fade-up and scale reveals to the requested public-page content without changing UI or copy.
+- [x] Preserve reduced-motion behavior and validate all requested pages on desktop/mobile, TypeScript, automated tests, and a bounded-memory production build.
+- [x] Save the public-page animation-extension checkpoint for delivery.
+- [x] Inspect the shared public shell and homepage boundaries for the appropriate permanent contact-footer insertion point.
+- [x] Add a shared animated footer with the clickable contactavoidit@gmail.com email address and the Avoiditnow social-profile presentation for X, Instagram, and Facebook.
+- [x] Defer social-profile destinations by user decision while retaining the Avoiditnow X, Instagram, and Facebook icon presentation until official URLs are supplied.
+- [x] Validate the footer across all public pages for accessibility, responsive layout, motion, TypeScript, automated tests, and a bounded-memory production build.
+- [x] Save the shared contact-footer addition checkpoint for delivery.
+- [x] Inspect the current Follow Along social presentation and Donate empty state before applying the requested copy and layout refinements.
+- [x] Reduce the Follow Along footprint, use icon-only social controls, retain the exact AVOIDITnow capitalization, and replace provisional footer wording with concise access guidance.
+- [x] Replace the Donate empty state with a simple “Coming soon.” message without changing unrelated donation UI.
+- [x] Validate the refined footer and Donate page on desktop/mobile, including accessibility, TypeScript, automated tests, and a bounded-memory production build.
+- [x] Save the contact-footer and Donate refinement checkpoint for delivery.
+- [x] Inspect the existing hero glass treatment, shared footer styling, wordmark implementation, and user-facing site-name references.
+- [x] Apply a softer translucent blurred footer treatment that preserves text readability and blend the footer with the surrounding page.
+- [x] Update the public wordmark to AVOIDITnow, preserving the existing circular logo and rendering now smaller but clearly legible.
+- [x] Validate desktop/mobile contrast, responsive wordmark appearance, TypeScript, automated tests, and a bounded-memory production build.
+- [x] Save the glass-footer and wordmark refinement checkpoint for delivery.
+- [x] Inspect the Donate heading order, current coming-soon treatment, circular O-mark geometry, and translucent footer styling.
+- [x] Make Coming soon the bold primary Donate message with a restrained loading visual and move the support heading beneath it.
+- [x] Realign only the circular O mark and diagonal arrow so the arrow bisects the O at its center and the mark aligns with the wordmark letters.
+- [x] Further soften the contact footer into a neutral, lighter glass surface while preserving legible text and existing content.
+- [x] Validate desktop/mobile/tablet presentation, TypeScript, automated tests, and a bounded-memory production build.
+- [x] Save the Donate, wordmark, and glass-footer refinement checkpoint for delivery.
+- [x] Inspect the current shared-footer social icon markup and its regression coverage before wiring the supplied profiles.
+- [x] Connect the supplied official X, Instagram, and Facebook destinations to the icon-only social controls with secure external-link behavior.
+- [x] Validate the three official destinations, keyboard labels, responsive footer continuity, TypeScript, automated tests, and a bounded-memory production build.
+- [x] Save the official social-profile connection checkpoint for delivery.
+- [x] Inspect the current Donate heading, supporting copy, small green Coming soon label, and loading card before the focused restoration.
+- [x] Restore the original Fund the work that makes choices clearer heading and its prior supporting copy while preserving the small green Coming soon label and loading indicator.
+- [x] Validate the unchanged Donate layout and loading card on desktop/mobile, TypeScript, automated tests, and a bounded-memory production build.
+- [x] Save the focused Donate copy restoration checkpoint for delivery.
+- [x] Audit public written references to the current Avoidit name and the landing-page boycott-scale metric strip.
+- [x] Replace public written brand references with AVOIDITnow while preserving the existing circular logo and its visual treatment.
+- [x] Animate the landing-page metrics from zero on viewport entry: 220+, 600+, and 2M+ people, without changing the current strip layout or entrance transitions.
+- [x] Validate brand wording, scroll-triggered count-up behavior, reduced-motion handling, responsive layout, TypeScript, automated tests, and a bounded-memory production build.
+- [x] Save the AVOIDITnow and animated-metrics refinement checkpoint for delivery.
+- [x] Audit the existing public-page viewport reveal triggers and landing metric counter behavior.
+- [x] Make public-page sections reveal in local staggered sequences only as their own content reaches the viewport, without changing the hero video.
+- [x] Make landing metrics restart and count while the strip is actively re-entered through scrolling, pausing when scrolling stops and respecting reduced motion.
+- [x] Validate scroll behavior, visual continuity, responsive layout, TypeScript, automated tests, and a bounded-memory production build.
+- [x] Save the scroll-motion and metric-reading refinement checkpoint for delivery.
+- [x] Inspect the reported landing metric count-up failure and current observer lifecycle.
+- [x] Restore the reliable zero-to-220+, zero-to-600+, and zero-to-2M+ count-up when the metric strip enters view, without changing other transitions.
+- [x] Validate the restored metric readings, reduced-motion fallback, TypeScript, automated tests, and a bounded-memory production build.
+- [x] Save the metric-reading restoration checkpoint for delivery.
+- [x] Confirm current AVOIDITnow data practices, third-party services, and unresolved legal-policy assumptions for the Privacy Policy and Terms of Use.
+- [x] Draft a complete Privacy Policy tailored to the current AVOIDITnow public site, product checker, news, Islamic guidance, contact, and social-link features.
+- [x] Draft complete Terms of Use covering educational content, source-linked boycott information, Islamic-guidance limitations, intellectual property, user conduct, external links, and future donation features.
+- [x] Review the drafts for feature alignment, clear unresolved placeholders, local-counsel review warnings, and footer-publication readiness.
+- [x] Audit the current product-search entry points, shared public layout, and reusable dialog components for a non-blocking first-visit agreement flow.
+- [x] Add accessible public Privacy Policy and Terms of Use routes using the approved counsel-review drafts and footer navigation links.
+- [x] Show a compact first-search agreement panel with policy links; remember acceptance locally and continue the pending product search immediately after acceptance.
+- [x] Validate policy routes, first-search agreement, return-visitor persistence, accessibility, desktop/mobile presentation, TypeScript, tests, and a bounded-memory production build.
+- [x] Save the lightweight legal-policy agreement flow checkpoint for delivery.
+- [x] Diagnose why the complete Privacy Policy and Terms of Use text is blank in the public policy-page content area.
+- [x] Render the full approved policy wording visibly in the existing policy layout and remove the requested pink draft-notice panel.
+- [x] Validate policy text visibility, linked policy navigation, desktop/mobile readability, TypeScript, automated tests, and a bounded-memory production build.
+- [x] Save the corrected public-policy content checkpoint for delivery.
+- [x] Review the supplied Privacy Policy and Terms of Use drafts, confirm available website facts, and preserve any legal details that cannot be verified.
+- [x] Generate polished, readable PDF editions of the Privacy Policy and Terms of Use with the confirmed 2026 effective and last-updated date.
+- [x] Upload the PDFs as durable website assets and add download controls to the existing policy pages without changing their visible document content or surrounding UI.
+- [x] Validate PDF readability, public download controls, responsive policy pages, TypeScript, automated tests, and a bounded-memory production build.
+- [x] Save the public legal-PDF release checkpoint for delivery.
+- [x] Inspect the current legal-page content placement and external PDF controls against the requested direct in-page reading experience.
+- [x] Remove external PDF controls while retaining the complete dated Privacy Policy and Terms of Use text directly on their respective pages and preserving linked policy navigation.
+- [x] Validate direct in-page legal content, related-policy navigation, desktop/mobile layout, TypeScript, automated tests, and a bounded-memory production build.
+- [x] Save the direct in-page legal-content release checkpoint for delivery.
+- [x] Extract and compare the actual written content of the newly supplied Privacy Policy and Terms of Use PDFs against the current website policy sources.
+- [x] Replace the policy-page source text with the supplied PDF wording and remove any reveal behavior that could hide its visible black written content.
+- [x] Validate complete visible direct legal text, related-policy navigation, responsive layout, TypeScript, automated tests, and a bounded-memory production build.
+- [x] Save the supplied-PDF-text legal-content release checkpoint for delivery.
+- [x] Inspect the current Privacy Policy and Terms of Use source wording for the requested August 2026 date and AVOIDITnow parenthetical removals.
+- [x] Update only the effective/last-updated date wording and the specified AVOIDITnow parenthetical phrases on the visible legal pages.
+- [x] Validate the targeted policy wording, direct in-page visibility, TypeScript, automated tests, and a bounded-memory production build.
+- [x] Save the policy wording refinement checkpoint for delivery.
+- [x] Audit the current product-search flow, authentication, schema, and Privacy Policy to define a minimised search-analytics design without user registration or searcher identity storage.
+- [x] Add search-event storage that records only normalised product-query text and a timestamp, plus server-side owner-only analytics procedures for aderokefati@gmail.com.
+- [x] Build a private, unlinked /dashboard page with calendar date-range filtering and most-/least-searched product analytics, without altering public-site navigation or layout.
+- [x] Revise the Privacy Policy accurately for the no-registration public experience, remove the Data Protection Officer row, and retain only necessary disclosures for contact, guidance, security, and aggregate search analytics.
+- [x] Validate private-dashboard access denial for other users, date-range aggregation, policy copy, responsive presentation, TypeScript, automated tests, and a bounded-memory production build.
+- [x] Save the private analytics dashboard and Privacy Policy release checkpoint for delivery.
+- [x] Inspect the current dashboard access rule and test coverage against the newly confirmed administrator email adaugo.fatigba@gmail.com.
+- [x] Restrict the private dashboard to the confirmed administrator email only and update dashboard access tests accordingly.
+- [x] Validate authorised dashboard rendering, unauthorised denial, TypeScript, automated tests, and a bounded-memory production build.
+- [x] Save the corrected administrator-email dashboard access checkpoint for delivery.
+- [x] Inspect the current dashboard single-email gate and selected date-range analytics data for the corrected administrator email adegokefaatihat@gmail.com and CSV export.
+- [x] Update the exclusive dashboard administrator email to adegokefaatihat@gmail.com and add a CSV export for aggregate selected-range search terms and counts only.
+- [x] Validate corrected owner access, CSV data contents, dashboard presentation, TypeScript, automated tests, and a bounded-memory production build.
+- [x] Save the corrected dashboard email and CSV export release checkpoint for delivery.
+- [x] Inspect the current hero, public-page, and shared layout patterns for a non-disruptive Volunteer Portal entry point.
+- [x] Create a public Volunteer Portal that outlines research, alternatives, news, guidance, regional, outreach, translation, QA, and technical volunteer roles.
+- [x] Add a privacy-preserving volunteer application form that prepares a pre-addressed "Volunteer Application" email to contactavoidit@gmail.com without storing applicant details in the website database.
+- [x] Add a restrained Call for volunteers hero action while preserving the current public navigation, UI, transitions, and product-checking experience.
+- [x] Validate the portal content, application-email composition, desktop/mobile layout, TypeScript, automated tests, and a bounded-memory production build.
+- [x] Save the Volunteer Portal and hero entry-point release checkpoint for delivery.
+- [x] Inspect the volunteer application form and email draft for the requested removal of availability and languages and optional relevant-experience field.
+- [x] Remove availability and languages from the Volunteer Portal and application email while retaining relevant experience as an optional field.
+- [x] Validate the simplified form, application-email composition, responsive layout, TypeScript, automated tests, and a bounded-memory production build.
+- [x] Save the simplified Volunteer Portal application form checkpoint for delivery.
+- [x] Inspect the current policy-agreement storage, dialog component, and all public product-search triggers to determine why the first-search prompt is not appearing.
+- [x] Restore the first-search Privacy Policy and Terms of Use prompt with direct policy links, remembered agreement, and automatic continuation of the pending search.
+- [x] Validate first-time prompt behavior, remembered acceptance, policy links, search continuation, responsive presentation, TypeScript, automated tests, and a bounded-memory production build.
+- [x] Save the restored first-search policy-agreement checkpoint for delivery.
+- [x] Audit current application data flow, database access boundaries, authentication, dashboard authorization, secrets handling, and deployment configuration.
+- [x] Research authoritative current guidance on application security and AI-assisted software-development risks relevant to public web applications.
+- [x] Produce a prioritised launch-security roadmap covering product-data protection, endpoint abuse controls, admin access, dependency review, monitoring, incident response, and recovery.
+- [x] Deliver the tailored AVOIDITnow security hardening assessment and implementation checklist.
+- [x] Save the launch-security assessment documentation checkpoint for delivery.
+- [x] Analyse the critical and high production dependency findings, their dependency paths, compatible fixed versions, and current request-control gaps.
+- [x] Apply reviewed dependency upgrades, overrides, removals, or narrowly scoped mitigations for critical and high reachable production findings.
+- [x] Add durable shared rate limits and endpoint-specific request-size caps for public product checks and Islamic-guidance requests, with safe 429 responses.
+- [x] Validate dependency-audit improvement, rate-limit enforcement, normal product checks and guidance requests, protected dashboard behavior, TypeScript, automated tests, and a bounded-memory production build.
+- [x] Save the dependency remediation and public endpoint hardening release checkpoint for delivery.
+- [x] Audit active deployment controls, production session fallback behavior, database access boundaries, and backup/recovery readiness.
+- [x] Restrict browser bearer-token fallback to development preview use, preserve required scheduled authentication, and add tested browser-facing security protections.
+- [x] Configure any available independent edge protection and document actionable provider settings that cannot be enforced from application code.
+- [x] Complete database least-privilege and backup/recovery readiness checks without exposing credentials or changing public data.
+- [x] Validate security headers, public and private application flows, authentication boundaries, automated tests, dependency audit, and production build.
+- [x] Save the final launch-hardening update checkpoint for delivery.
+- [x] Prepare the user-supplied AVOIDITnow banner as a managed website asset and review the About Us purpose-section layout.
+- [x] Add the banner beside the About Us purpose content with accessible responsive styling and without changing other page content.
+- [x] Validate the desktop and mobile About Us layout, automated checks, and production build, then publish the banner update.
+- [x] Audit primary public pages, mobile navigation, product checking, Islamic guidance, volunteer, legal, and dashboard routes at phone viewport sizes.
+- [x] Apply focused mobile layout, touch-target, overflow, readability, and form-interaction fixes without changing established content or desktop design.
+- [x] Validate mobile and desktop flows, accessibility-sensitive interactions, automated tests, and production build, then publish the responsive refinement.
+- [x] Review the supplied About Us banner geometry and identify the exact Check a Product click target.
+- [x] Make only the banner’s existing Check a Product area an accessible responsive link to the product-checker page.
+- [x] Validate the interactive banner target at desktop and mobile sizes, automated checks, and production build, then publish the focused update.
+- [ ] Inspect the specified GitHub repository, current project export state, secure configuration, and Vercel compatibility constraints.
+- [ ] Adapt the full-stack project for Vercel-compatible serverless deployment without changing public functionality or security protections.
+- [ ] Add complete secure deployment instructions and an environment-variable template without committing secrets, database credentials, or platform tokens.
+- [ ] Validate the portable build and transfer all safe tracked project files to the specified GitHub repository.
+- [ ] Save the verified GitHub and Vercel portability update checkpoint for delivery.

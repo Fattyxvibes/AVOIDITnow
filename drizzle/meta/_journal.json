@@ -1,0 +1,76 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1786705828624,
+      "tag": "0000_organic_hammerhead",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1786706087644,
+      "tag": "0001_striped_ultimo",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1786706237129,
+      "tag": "0002_bored_scarlet_witch",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1786706300792,
+      "tag": "0003_normal_silver_samurai",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1786706888251,
+      "tag": "0004_secret_serpent_society",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1786711235634,
+      "tag": "0005_uneven_scarecrow",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1786719890137,
+      "tag": "0006_fixed_sabra",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "5",
+      "when": 1787159470174,
+      "tag": "0007_rainy_dormammu",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "5",
+      "when": 1787772480937,
+      "tag": "0008_remarkable_true_believers",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "5",
+      "when": 1787864410339,
+      "tag": "0009_graceful_lady_deathstrike",
+      "breakpoints": true
+    }
+  ]
+}

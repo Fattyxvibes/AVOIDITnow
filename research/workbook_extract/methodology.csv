@@ -1,0 +1,8 @@
+Topic,Method / interpretation
+Input,The user-provided URL was used as the inventory source. Page text was captured on 14 Aug 2026 (user timezone).
+Inventory,Parent entries were included. Explicit child names shown under a parent were treated as sub-products or sub-brands. Entries with no child names were represented by a clearly labeled core offering.
+Alternatives,Three alternatives were selected from distinct companies and matched to the nearest practical product/service category. The same alternative company may recur across different rows when it is a category-appropriate substitute.
+Company distinction,"Alternative 1, 2 and 3 companies are different from one another and are not the listed brand for that record. The database does not attempt to map every corporate parent/subsidiary relationship worldwide."
+Sources,"The supplied source page is cited as the inventory source. For alternatives, official company/product landing pages are linked in the Alternatives and Source Inventory sheets. Links are starting points for verification, not endorsements."
+Availability,"Retail availability, formulations, service coverage, regulation, and ownership can vary by country and over time. Verify locally before purchasing."
+Medical products,The source page itself warns against stopping medications. This database does not recommend medication switching and should not be used to alter treatment.
