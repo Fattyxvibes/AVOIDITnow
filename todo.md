@@ -323,8 +323,14 @@
 - [x] Review the supplied About Us banner geometry and identify the exact Check a Product click target.
 - [x] Make only the banner’s existing Check a Product area an accessible responsive link to the product-checker page.
 - [x] Validate the interactive banner target at desktop and mobile sizes, automated checks, and production build, then publish the focused update.
-- [ ] Inspect the specified GitHub repository, current project export state, secure configuration, and Vercel compatibility constraints.
-- [ ] Adapt the full-stack project for Vercel-compatible serverless deployment without changing public functionality or security protections.
-- [ ] Add complete secure deployment instructions and an environment-variable template without committing secrets, database credentials, or platform tokens.
-- [ ] Validate the portable build and transfer all safe tracked project files to the specified GitHub repository.
-- [ ] Save the verified GitHub and Vercel portability update checkpoint for delivery.
+- [x] Inspect the specified GitHub repository, current project export state, secure configuration, and Vercel compatibility constraints.
+- [x] Adapt the full-stack project for Vercel-compatible serverless deployment without changing public functionality or security protections.
+- [x] Add complete secure deployment instructions and an environment-variable template without committing secrets, database credentials, or platform tokens.
+- [x] Validate the portable build and transfer all safe tracked project files to the specified GitHub repository.
+- [x] Save the verified GitHub and Vercel portability update checkpoint for delivery.
+
+- [ ] Diagnose Vercel product-check, Updates, Islamic-guidance, Donate, About Us media, API routing, database, AI, news, and asset failures against the working Manus deployment.
+- [ ] Repair the Vercel-compatible runtime, environment contract, routing, API/database integration, and portable media behavior without changing the Manus deployment.
+- [ ] Add regression coverage and secure Vercel deployment guidance for the repaired feature paths and required external configuration.
+- [ ] Validate the Vercel build, serverless API bundle, public feature routes, media loading, and failure states, then push the repaired export to GitHub.
+- [ ] Save the verified Vercel runtime repair checkpoint and provide the remaining external deployment handoff.

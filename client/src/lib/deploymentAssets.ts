@@ -1,4 +1,17 @@
-const isVercelBuild = import.meta.env.VITE_DEPLOYMENT_TARGET === "vercel";
+export function isPortableDeployment(
+  buildTarget: string | undefined,
+  hostname: string | undefined,
+) {
+  return (
+    buildTarget === "vercel" ||
+    hostname?.toLowerCase().endsWith(".vercel.app") === true
+  );
+}
+
+const isVercelBuild = isPortableDeployment(
+  import.meta.env.VITE_DEPLOYMENT_TARGET,
+  typeof window !== "undefined" ? window.location.hostname : undefined,
+);
 
 function asset(managedPath: string, portablePath: string) {
   return isVercelBuild ? portablePath : managedPath;
