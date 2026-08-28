@@ -329,8 +329,16 @@
 - [x] Validate the portable build and transfer all safe tracked project files to the specified GitHub repository.
 - [x] Save the verified GitHub and Vercel portability update checkpoint for delivery.
 
-- [ ] Diagnose Vercel product-check, Updates, Islamic-guidance, Donate, About Us media, API routing, database, AI, news, and asset failures against the working Manus deployment.
+- [x] Diagnose Vercel product-check, Updates, Islamic-guidance, Donate, About Us media, API routing, database, AI, news, and asset failures against the working Manus deployment.
 - [ ] Repair the Vercel-compatible runtime, environment contract, routing, API/database integration, and portable media behavior without changing the Manus deployment.
-- [ ] Add regression coverage and secure Vercel deployment guidance for the repaired feature paths and required external configuration.
+- [x] Add regression coverage and secure Vercel deployment guidance for the repaired feature paths and required external configuration.
 - [ ] Validate the Vercel build, serverless API bundle, public feature routes, media loading, and failure states, then push the repaired export to GitHub.
 - [ ] Save the verified Vercel runtime repair checkpoint and provide the remaining external deployment handoff.
+
+- [x] Inspect the supplied boycott and alternatives workbook structure and compare it with the existing product data model and import conventions without exposing raw workbook data.
+- [x] Transform and validate the updated workbook with deduplication, relationship, source, and count integrity checks.
+- [x] Apply the reviewed workbook data update safely to the existing product and alternatives tables without altering analytics privacy or unrelated features.
+- [x] Validate representative searches, alternatives, counts, automated tests, type checking, production build, and route stability, then publish the updated product source.
+
+- [x] Re-import the user-supplied `boycott_alternatives_bds_updated.xlsx` into the live boycott listings and listing-alternatives tables, preserving idempotency, source metadata, and the existing product-checker query path.
+- [x] Validate updated workbook counts, representative brand/sub-product matches, three alternatives per listing, no duplicate rows, and product-checker behavior after the refresh.

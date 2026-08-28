@@ -317,7 +317,7 @@ export async function checkDatabaseProduct(input: { query: string }) {
   const source = {
     name: "Boycott-list guidance and related alternatives",
     url: "https://boycott-israel.org/boycott.html",
-    reviewedAt: "2026-08-14",
+    reviewedAt: "2026-08-19",
     caveat: "A result means the search matches an item on the boycott list. A missing result means the product is not currently on this list; it is not a general endorsement or assurance.",
   };
   if (!db || !query) return { query, verdict: "unreviewed" as const, matches: [], source };
