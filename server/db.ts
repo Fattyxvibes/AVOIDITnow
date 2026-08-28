@@ -231,8 +231,67 @@ export async function checkReviewedProduct(input: { query: string; region?: stri
   return { query, verdict: matches.length ? "reviewed_match" as const : "no_reviewed_match" as const, matches, alternatives: alternativesForMatches, source };
 }
 
-function normalizeDatabaseSearch(value: string) {
-  return value.toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, " ").trim();
+export function normalizeDatabaseSearch(value: string) {
+  return value
+    .toLocaleLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    // Apostrophes are punctuation, not meaningful spelling differences: both
+    // “Domino's” and “Dominos” should resolve to the same search key.
+    .replace(/[’']/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+function editDistance(left: string, right: string) {
+  const previous = Array.from({ length: right.length + 1 }, (_, index) => index);
+  for (let leftIndex = 1; leftIndex <= left.length; leftIndex += 1) {
+    const current = [leftIndex];
+    for (let rightIndex = 1; rightIndex <= right.length; rightIndex += 1) {
+      current[rightIndex] = Math.min(
+        current[rightIndex - 1] + 1,
+        previous[rightIndex] + 1,
+        previous[rightIndex - 1] + (left[leftIndex - 1] === right[rightIndex - 1] ? 0 : 1),
+      );
+    }
+    for (let rightIndex = 0; rightIndex <= right.length; rightIndex += 1) previous[rightIndex] = current[rightIndex];
+  }
+  return previous[right.length];
+}
+
+export async function getProductSuggestions(input: { query: string }) {
+  const db = await getDb();
+  const query = input.query.trim();
+  if (!db || !query) return [];
+  const normalizedQuery = normalizeDatabaseSearch(query);
+  if (!normalizedQuery) return [];
+
+  const listings = await db.select({ listedBrand: boycottListings.listedBrand, listedSubproduct: boycottListings.listedSubproduct }).from(boycottListings);
+  const candidates = new Map<string, { name: string; subproduct: string; score: number }>();
+  for (const listing of listings) {
+    const names = [listing.listedBrand, listing.listedSubproduct];
+    for (const name of names) {
+      const normalizedName = normalizeDatabaseSearch(name);
+      if (!normalizedName) continue;
+      const tokens = normalizedName.split(" ");
+      const queryTokens = normalizedQuery.split(" ");
+      const tokenMatch = queryTokens.some(queryToken => tokens.some(token => token.startsWith(queryToken) || queryToken.startsWith(token)));
+      const distance = normalizedQuery.length >= 4 ? editDistance(normalizedQuery, normalizedName) : 99;
+      let score = 0;
+      if (normalizedName === normalizedQuery) score = 1000;
+      else if (normalizedName.startsWith(normalizedQuery)) score = 850;
+      else if (normalizedName.includes(normalizedQuery)) score = 700;
+      else if (tokenMatch) score = 550;
+      else if (distance <= (normalizedQuery.length >= 7 ? 2 : 1)) score = 450 - distance * 20;
+      if (!score) continue;
+      const existing = candidates.get(normalizedName);
+      if (!existing || score > existing.score) candidates.set(normalizedName, { name, subproduct: listing.listedSubproduct, score });
+    }
+  }
+  return Array.from(candidates.values())
+    .sort((left, right) => right.score - left.score || left.name.localeCompare(right.name))
+    .slice(0, 8)
+    .map(({ name, subproduct }) => ({ name, subproduct }));
 }
 
 export async function recordProductSearch(query: string) {

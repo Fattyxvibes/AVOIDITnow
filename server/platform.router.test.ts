@@ -6,6 +6,7 @@ vi.mock("./db", () => ({
   checkDatabaseProduct: vi.fn(),
   consumeRateLimit: vi.fn(),
   recordProductSearch: vi.fn(),
+  getProductSuggestions: vi.fn(),
 }));
 
 import * as db from "./db";
@@ -33,6 +34,28 @@ describe("platform.directory.list", () => {
 
     await expect(caller.platform.directory.list({ status: "unreviewed" as never })).rejects.toMatchObject({ code: "BAD_REQUEST" });
     expect(db.listBrands).not.toHaveBeenCalled();
+  });
+});
+
+describe("platform.productSuggestions", () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+    vi.mocked(db.consumeRateLimit).mockResolvedValue({ allowed: true, count: 1, resetAt: new Date(Date.now() + 60_000) } as never);
+  });
+
+  it("forwards a one-character partial query to the source-backed suggestion helper", async () => {
+    const suggestions = [{ name: "Domino's", subproduct: "Pizza delivery and restaurants" }];
+    vi.mocked(db.getProductSuggestions).mockResolvedValue(suggestions as never);
+    const caller = appRouter.createCaller(context);
+
+    await expect(caller.platform.productSuggestions({ query: "d" })).resolves.toEqual(suggestions);
+    expect(db.getProductSuggestions).toHaveBeenCalledWith({ query: "d" });
+  });
+
+  it("rejects an empty suggestion query before reaching the data layer", async () => {
+    const caller = appRouter.createCaller(context);
+    await expect(caller.platform.productSuggestions({ query: "" })).rejects.toMatchObject({ code: "BAD_REQUEST" });
+    expect(db.getProductSuggestions).not.toHaveBeenCalled();
   });
 });
 

@@ -9,6 +9,23 @@ const optionalUrl = z.string().url().optional().or(z.literal(""));
 
 export const platformRouter = router({
   stats: publicProcedure.query(() => db.getPlatformStats()),
+  productSuggestions: publicProcedure.input(z.object({ query: z.string().min(1).max(80) })).query(async ({ ctx, input }) => {
+    let limitResult: Awaited<ReturnType<typeof db.consumeRateLimit>>;
+    try {
+      limitResult = await db.consumeRateLimit({
+        ...PUBLIC_REQUEST_POLICIES.productSuggestions,
+        clientKey: createPublicClientKey(ctx.req),
+      });
+    } catch (error) {
+      console.error("[product-suggestions] shared rate-limit check failed", error);
+      throw new TRPCError({ code: "SERVICE_UNAVAILABLE", message: "Product suggestions are temporarily unavailable. Please try again shortly." });
+    }
+    if (!limitResult.allowed) {
+      if (typeof ctx.res.setHeader === "function") ctx.res.setHeader("Retry-After", String(retryAfterSeconds(limitResult.resetAt)));
+      throw new TRPCError({ code: "TOO_MANY_REQUESTS", message: "Too many product suggestions. Please wait a moment and try again." });
+    }
+    return db.getProductSuggestions(input);
+  }),
   productCheck: publicProcedure.input(z.object({ query: z.string().min(2).max(160) })).query(async ({ ctx, input }) => {
     let limitResult: Awaited<ReturnType<typeof db.consumeRateLimit>>;
     try {

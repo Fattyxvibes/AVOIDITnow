@@ -342,3 +342,7 @@
 
 - [x] Re-import the user-supplied `boycott_alternatives_bds_updated.xlsx` into the live boycott listings and listing-alternatives tables, preserving idempotency, source metadata, and the existing product-checker query path.
 - [x] Validate updated workbook counts, representative brand/sub-product matches, three alternatives per listing, no duplicate rows, and product-checker behavior after the refresh.
+
+- [x] Add live product suggestions from the reviewed boycott source, including first-letter and partial-brand search assistance with accessible keyboard and touch selection.
+- [x] Make product matching tolerant of punctuation, apostrophes, spacing, and common spelling variation so searches such as `Dominos` suggest and resolve `Domino's` with its correct status and alternatives.
+- [x] Add regression coverage and validate the suggestion dropdown, one-click lookup, mobile behavior, and existing product-checker flows before publishing.

@@ -5,6 +5,7 @@ import * as db from "./db";
 
 export const PUBLIC_REQUEST_POLICIES = {
   productCheck: { scope: "product-check", limit: 30, windowMs: 60_000 },
+  productSuggestions: { scope: "product-suggestions", limit: 90, windowMs: 60_000 },
   assistant: { scope: "islamic-guidance", limit: 5, windowMs: 60_000 },
   assistantStreamLeaseMs: 180_000,
 } as const;
