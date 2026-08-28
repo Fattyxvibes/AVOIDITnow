@@ -330,10 +330,10 @@
 - [x] Save the verified GitHub and Vercel portability update checkpoint for delivery.
 
 - [x] Diagnose Vercel product-check, Updates, Islamic-guidance, Donate, About Us media, API routing, database, AI, news, and asset failures against the working Manus deployment.
-- [ ] Repair the Vercel-compatible runtime, environment contract, routing, API/database integration, and portable media behavior without changing the Manus deployment.
+- [x] Repair the Vercel-compatible runtime, environment contract, routing, API/database integration, and portable media behavior without changing the Manus deployment; the code and portable media bundle are ready, while Vercel still requires its dashboard environment values.
 - [x] Add regression coverage and secure Vercel deployment guidance for the repaired feature paths and required external configuration.
-- [ ] Validate the Vercel build, serverless API bundle, public feature routes, media loading, and failure states, then push the repaired export to GitHub.
-- [ ] Save the verified Vercel runtime repair checkpoint and provide the remaining external deployment handoff.
+- [x] Validate the Vercel build, serverless API bundle, public feature routes, media loading, and failure states locally, then push the repaired export to GitHub.
+- [x] Save the verified Vercel runtime repair checkpoint and provide the remaining external deployment handoff, including the required Vercel dashboard environment configuration.
 
 - [x] Inspect the supplied boycott and alternatives workbook structure and compare it with the existing product data model and import conventions without exposing raw workbook data.
 - [x] Transform and validate the updated workbook with deduplication, relationship, source, and count integrity checks.

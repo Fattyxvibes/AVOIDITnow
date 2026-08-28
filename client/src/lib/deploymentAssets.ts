@@ -23,8 +23,8 @@ export const deploymentAssets = {
     "/media/avoidit-circular-arrow-transparent.png",
   ),
   heroVideo: asset(
-    "/manus-storage/avoidit-hero-video-1440p-lite_28df1650.mp4",
-    "/media/avoidit-hero-video.mp4",
+    "/manus-storage/avoidit-hero-video_3bb1544e.mp4",
+    "https://avoidit-4fscyekj.manus.space/manus-storage/avoidit-hero-video_3bb1544e.mp4",
   ),
   heroPoster: asset(
     "/manus-storage/avoidit-hero-video-poster_ee375c33.webp",
