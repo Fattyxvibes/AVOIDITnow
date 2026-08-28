@@ -4,6 +4,9 @@
   "installCommand": "pnpm install --frozen-lockfile",
   "buildCommand": "pnpm run build:vercel",
   "outputDirectory": "public",
+  "env": {
+    "VITE_DEPLOYMENT_TARGET": "vercel"
+  },
   "functions": {
     "api/index.ts": {
       "supportsCancellation": true

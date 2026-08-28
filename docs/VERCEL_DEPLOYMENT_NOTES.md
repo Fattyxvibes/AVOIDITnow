@@ -34,7 +34,7 @@ Before the first deployment, set the following values in **Vercel Project Settin
 | `VITE_APP_ID`, `OAUTH_SERVER_URL`, `VITE_OAUTH_PORTAL_URL` | Existing private-dashboard sign-in flow | Confirm the OAuth application explicitly allows `https://YOUR_VERCEL_DOMAIN/api/oauth/callback` before enabling public dashboard sign-in. |
 | `AI_API_BASE_URL`, `AI_API_KEY`, `AI_MODEL` | Islamic Guidance stream and focused-news classification | Use an OpenAI-compatible provider endpoint root, a server-only provider key, and a model identifier supported by that provider. Never use a `VITE_` prefix for the key. |
 | `CRON_SECRET` | Daily focused-news refresh | Generate an independent random secret of at least 16 characters. Vercel sends it in the scheduled request’s bearer authorization header. |
-| `VITE_DEPLOYMENT_TARGET` | Portable media URLs at client build time | Set exactly to `vercel`. This is intentionally non-secret. |
+| `VITE_DEPLOYMENT_TARGET` | Portable media URLs at client build time | `vercel.json` now sets this automatically to `vercel`; keep it non-secret and do not override it. |
 
 > The managed platform’s injected `BUILT_IN_FORGE_*`, analytics, OAuth, and storage credentials are not portable secrets. They must **not** be copied into GitHub or Vercel. The Vercel export substitutes a self-contained static media bundle and accepts an independently configured OpenAI-compatible provider for guidance. If the existing OAuth provider cannot allow the new Vercel callback URL, the public website and product checker still work, but the private dashboard remains unavailable until a compatible sign-in provider is configured.
 
